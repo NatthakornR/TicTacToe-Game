@@ -16,7 +16,7 @@ int main() {
     char currentPlayer = 'X';
     bool gameRunning = true;
 
-    cout << "Welcome to Tic-Tac-Toe!\n";
+    cout << "Welcome!\n";
     cout << "Player 1: X\nPlayer 2: O\n\n";
 
     while (gameRunning) {
@@ -33,7 +33,7 @@ int main() {
 
         if (isBoardFull(board)) {
             displayBoard(board);
-            cout << "It's a draw!\n";
+            cout << "draw!\n";
             gameRunning = false;
             break;
         }
@@ -87,7 +87,7 @@ bool isBoardFull(const vector<vector<char>>& board) {
 void getPlayerMove(vector<vector<char>>& board, char symbol) {
     int row, col;
     while (true) {
-        cout << "Player " << (symbol == 'X' ? 1 : 2) << " (" << symbol << "), enter your move (row and column: 1-3 1-3): ";
+        cout << "Player " << (symbol == 'X' ? 1 : 2) << " (" << symbol << "), Move now! (row and column: 1-3 1-3): ";
         cin >> row >> col;
 
         row--;
